@@ -1,10 +1,10 @@
 # HERITRIX
 
-FROM java
+FROM openjdk:8-stretch
 
 MAINTAINER chris@cbeer.info
 
-ENV HERITRIX_VERSION 3.2.0
+ENV HERITRIX_VERSION 3.4.0-SNAPSHOT
 RUN apt-get update && apt-get install -y wget  unzip
 
 RUN wget -q -O /tmp/heritrix.tar.gz http://builds.archive.org/maven2/org/archive/heritrix/heritrix/${HERITRIX_VERSION}/heritrix-${HERITRIX_VERSION}-dist.tar.gz
